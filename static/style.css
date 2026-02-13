@@ -1,0 +1,277 @@
+/* static/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #dbcddd 0%, #dac3f2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Patinhas decorativas */
+body::before {
+    content: "🐾";
+    font-size: 120px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    opacity: 0.1;
+    transform: rotate(-15deg);
+}
+
+body::after {
+    content: "🐱";
+    font-size: 150px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.1;
+    transform: rotate(15deg);
+}
+
+h1 {
+    color: white;
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    letter-spacing: -1px;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+form {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-5px);
+}
+
+label {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 18px 25px;
+    font-size: 1.2rem;
+    border: 3px solid #e2e8f0;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    font-family: 'Quicksand', sans-serif;
+    background: #f7fafc;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+    background: white;
+}
+
+input[type="text"]::placeholder {
+    color: #a0aec0;
+    font-size: 1rem;
+}
+
+button {
+    background: linear-gradient(135deg, #dbcddd 0%, #dac3f2 100%);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(164, 102, 234, 0.4);
+}
+
+button::after {
+    content: "🐱";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+button:hover::after {
+    opacity: 1;
+    right: 30px;
+}
+
+hr {
+    display: none; /* Escondendo a linha horizontal */
+}
+
+.imagem_gato {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    border-radius: 30px;
+    margin: 30px 0 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 5px solid white;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.imagem_gato:hover {
+    transform: scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.nome_gato {
+    font-size: 2rem;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.6s ease;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 30px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.mensagem {
+    background: linear-gradient(135deg, #feb692 0%, #ff6e7f 100%);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 20px 0;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+/* Patinhas flutuantes adicionais */
+.paw-print {
+    position: absolute;
+    font-size: 30px;
+    opacity: 0.2;
+    pointer-events: none;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    
+    form {
+        padding: 30px 20px;
+    }
+    
+    button {
+        font-size: 1.1rem;
+        padding: 15px 30px;
+    }
+    
+    .imagem_gato {
+        max-width: 300px;
+    }
+    
+    .nome_gato {
+        font-size: 1.5rem;
+    }
+    
+    body::before {
+        font-size: 80px;
+    }
+    
+    body::after {
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    input[type="text"] {
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+    
+    .mensagem {
+        font-size: 1rem;
+        padding: 15px 20px;
+    }
+}
