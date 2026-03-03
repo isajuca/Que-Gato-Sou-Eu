@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Que Gato sou eu?</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="static/images/icon.png" type="image/x-icon">
 </head>
 <body>
-    <h1>Que Gato sou eu?</h1>
+    <h1><img src="../static/images/icon.png" alt="" width="150px">Que gato eu sou?</h1>
     <div class="container">
         <form action="/cat" method="post" class="form-section">
             <label for="nome">Digite seu nome:</label>
